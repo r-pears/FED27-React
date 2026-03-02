@@ -1,0 +1,25 @@
+{
+  "id": 1,
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "username": "johndoe",
+  "avatar": "https://i.pravatar.cc/150?img=3",
+  "dateOfBirth": "1990-05-15",
+  "address": {
+    "street": "123 Main Street",
+    "city": "San Francisco",
+    "state": "CA",
+    "zipCode": "94102",
+    "country": "USA"
+  },
+  "phone": "+1 (555) 123-4567",
+  "role": "user",
+  "isActive": true,
+  "createdAt": "2024-01-15T10:30:00Z",
+  "preferences": {
+    "theme": "dark",
+    "notifications": true,
+    "language": "en"
+  }
+}
