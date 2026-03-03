@@ -137,8 +137,80 @@ When you run the app, you should see:
 - Typing in any field updates the displayed value in real-time
 - Clicking submit logs the form data to the console and optionally clears the form
 
-### Bonus Challenges
+## Exercise 3: Routing
 
-1. **Add validation** - Show an error message if any field is empty when submitting
-2. **Display submitted data** - Instead of just logging, display the submitted data on the page
-3. **Add a "submissions" list** - Store multiple submissions in an array and display them all
+**Goal:** Learn how to set up client-side routing with `react-router-dom`, create navigation links, and render different components based on the URL.
+
+### Setup
+
+First, install react-router-dom:
+
+```bash
+npm install react-router-dom
+```
+
+### Steps
+
+1. **Set up the Router in App.jsx**
+   - Open `src/App.jsx`
+   - Import `BrowserRouter`, `Routes`, and `Route` from `react-router-dom`
+   - Wrap your entire app in `<BrowserRouter>`
+   - Inside the `<Layout>` component, use `<Routes>` to define your route configuration
+
+2. **Create route definitions**
+   - Add a `<Route>` for the homepage at path `"/"`
+   - Add a `<Route>` for the contact form at path `"/contact"`
+   - Each route should render its corresponding component using the `element` prop
+   - Example: `<Route path="/" element={<Homepage user={mockUser} />} />`
+
+3. **Update the Navbar with Link components**
+   - Open `src/components/Navbar/Navbar.jsx`
+   - Import `Link` from `react-router-dom`
+   - Replace any `<a>` tags with `<Link>` components
+   - Use the `to` prop instead of `href`
+   - Example: `<Link to="/">Home</Link>`
+
+4. **Add navigation links using Link**
+   - Create a link to Home: `<Link to="/">Home</Link>`
+   - Create a link to Contact: `<Link to="/contact">Contact</Link>`
+
+5. **Test your routes**
+   - Click the navigation links and verify the URL changes
+   - Verify the correct component renders for each route
+   - Try manually typing URLs in the browser address bar
+
+6. **Create a button that navigates using Link**
+   - In the `Homepage` component, add a button that links to the contact page
+   - Wrap a `<button>` element inside a `<Link>` component
+   - Alternatively, style the `Link` itself to look like a button using CSS
+
+7. **Upgrade to NavLink for active styling in Navbar**
+   - Replace `Link` with `NavLink` in your imports
+   - Replace `<Link>` components with `<NavLink>` components
+   - `NavLink` automatically adds an "active" class when the link matches the current URL
+   - Add CSS to style the active state:
+
+8. **Customize NavLink active behavior (optional)**
+   - Use the `className` prop with a function to apply custom classes
+   - Alternatively, use the `style` prop with a function for inline styles:
+
+### Hints
+
+- `BrowserRouter` must wrap everything that uses routing
+- `Routes` is a container for all your `Route` definitions
+- Each `Route` needs a `path` and an `element` prop
+- Use `Link` instead of `<a>` tags to prevent full page reloads
+- The `to` prop on both `Link` and `NavLink` works like `href` on anchor tags
+- `NavLink` is like `Link` but adds automatic "active" class when the route matches
+- `NavLink` accepts `className` and `style` as functions that receive `{ isActive }`
+
+### Expected Result
+
+When you run the app, you should see:
+
+- A Navbar with clickable links for Home and Contact
+- Clicking "Home" navigates to `/` and shows the Homepage component
+- Clicking "Contact" navigates to `/contact` and shows the ContactForm component
+- The URL in the browser updates without a full page reload
+- The Navbar and Footer remain visible on all pages (they're in the Layout)
+- If using `NavLink`, the current page's link should have the "active" class applied
