@@ -1,0 +1,28 @@
+.heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactButton {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-size: 0.85rem;
+}
+
+.contactButton:hover {
+    background: #333;
+}

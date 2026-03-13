@@ -1,0 +1,105 @@
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 4rem 2.5rem 2rem;
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footerBrand {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerLogo {
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.footerBrand p {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footerNav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerNavTitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    color: #999;
+}
+
+.footerNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footerNav li {
+    margin-bottom: 0.5rem;
+}
+
+.footerNav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footerNav a:hover {
+    text-decoration: underline;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+}
+
+.footerBottom p {
+    color: #666;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.footerLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.footerLinks a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footerLinks a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .footerContent {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .footerBottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

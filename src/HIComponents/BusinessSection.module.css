@@ -1,0 +1,44 @@
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.businessIntro {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.businessList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.businessList li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.businessList li::before {
+    content: "✓ ";
+}
+
+.ctaButton {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-size: 0.85rem;
+}
+
+.ctaButton:hover {
+    background: #f0f0f0;
+}

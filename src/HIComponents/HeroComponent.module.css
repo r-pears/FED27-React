@@ -1,0 +1,74 @@
+.heroSection {
+    background-color: #ff6b00;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 2.5rem;
+}
+
+.heroContent {
+    max-width: 600px;
+}
+
+.heroTitle {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.heroText {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.heroButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: fit-content;
+}
+
+.buttonPrimary {
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid black;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: #e05a00;
+    text-align: center;
+}
+
+.buttonPrimary:hover {
+    background: #cc5000;
+}
+
+.buttonSecondary {
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid black;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: white;
+    text-align: center;
+}
+
+.buttonSecondary:hover {
+    background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+}
