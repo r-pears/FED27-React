@@ -3,7 +3,7 @@ import {useContext} from "react";
 
 export function About(){
 
-    const { characters } = useContext(CharacterContext)
+    // const { characters } = useContext(CharacterContext)
 
     return(
         <section>

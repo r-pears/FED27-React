@@ -5,8 +5,13 @@ export const CharacterContext = createContext();
 export const CharacterProvider = ({ children }) => {
     const [characters, setCharacters] = useState([]);
 
+    const value = {
+        characters,
+        setCharacters
+    }
+
     return (
-        <CharacterContext.Provider value={{ characters, setCharacters }}>
+        <CharacterContext.Provider value={value}>
             {children}
         </CharacterContext.Provider>
     )

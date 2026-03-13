@@ -13,7 +13,7 @@ export function Home() {
     },
   });
   // const [characters, setCharacters] = useState([]);
-  const { characters, setCharacters } = useContext(CharacterContext)
+  const { characters, setCharacters } = useContext(CharacterContext);
 
   useEffect(() => {
     const fetchCharacters = async () => {
