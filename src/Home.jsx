@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { About } from "./About";
-import {CharacterContext} from "./Context/CharacterContext";
+import { CharacterContext } from "./Context/CharacterContext";
 
 export function Home() {
   // user state with nested object

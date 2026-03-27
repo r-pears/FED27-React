@@ -16,8 +16,8 @@ import { Services } from "./Components/Pages/Services";
 import { CharacterProvider } from "./Context/CharacterContext";
 import { RefExample } from "./useRef/RefExample";
 import { MultiStepForm } from "./MultiStepForm/MultiStepForm";
-import {PerformanceExample} from "./Performance/PerformanceExample";
-import {HooksExample} from "./CustomHooks/HooksExample";
+import { HooksExample } from "./CustomHooks/HooksExample";
+import {Parent} from "./Performance/Parent";
 
 const App = () => {
   return (
@@ -48,11 +48,16 @@ const App = () => {
             </Route>
           </Route>
 
+          {/* useRef example */}
           <Route path="/useRef" element={<RefExample />} />
 
+          {/* Multi step form example */}
           <Route path="/multistep" element={<MultiStepForm />} />
-          <Route path={"/performance"} element={<PerformanceExample/>} />
-          <Route path={'/hooks'} element={<HooksExample />} />
+
+          {/* Custom hooks example */}
+          <Route path={"/hooks"} element={<HooksExample />} />
+
+          <Route path={'/performance'} element={<Parent/>} />
         </Routes>
       </CharacterProvider>
     </BrowserRouter>
