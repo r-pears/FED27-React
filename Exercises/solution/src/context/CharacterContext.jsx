@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useContext } from 'react';
+import { createContext, useState, useEffect, useContext } from "react";
 
 export const CharacterContext = createContext();
 
@@ -10,15 +10,15 @@ export function CharacterProvider({ children }) {
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
-        const response = await fetch('https://swapi.info/api/people');
+        const response = await fetch("https://swapi.info/api/people");
         if (!response.ok) {
-          throw new Error('Failed to fetch characters');
+          throw new Error("Failed to fetch characters");
         }
         const data = await response.json();
         setCharacters(data);
         setLoading(false);
       } catch (err) {
-        setError(err.message || 'Failed to fetch characters');
+        setError(err.message || "Failed to fetch characters");
         setLoading(false);
       }
     };
@@ -35,7 +35,7 @@ export function CharacterProvider({ children }) {
 export function useCharacters() {
   const context = useContext(CharacterContext);
   if (context === undefined) {
-    throw new Error('useCharacters must be used within a CharacterProvider');
+    throw new Error("useCharacters must be used within a CharacterProvider");
   }
   return context;
 }

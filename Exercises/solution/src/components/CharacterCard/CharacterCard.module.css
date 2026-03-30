@@ -1,0 +1,82 @@
+.card {
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+}
+
+.card.selected {
+  border-color: #28a745;
+  background: #f0fff4;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.name:hover {
+  text-decoration: underline;
+}
+
+.selectButton {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.card.selected .selectButton {
+  border-color: #28a745;
+  background: #28a745;
+  color: white;
+}
+
+.selectButton:hover {
+  border-color: #007bff;
+}
+
+.details {
+  font-size: 14px;
+  color: #555;
+}
+
+.details p {
+  margin: 4px 0;
+}
+
+.details span {
+  color: #888;
+  margin-right: 5px;
+}
+
+.renderInfo {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-size: 11px;
+  color: #999;
+  text-align: right;
+}
